@@ -17,4 +17,4 @@ push:
 	docker push $(IMAGE):$(VERSION)
 
 docker-run:
-	docker run -i -t --rm -e TGTOKEN=$(TOKEN) -v ${PWD}/${LOCALCONFIG}:${REMOTECONFIG} $(IMAGE):$(VERSION)
+	docker run -i -t --rm --env-file=${tokenfile} -v ${PWD}/${LOCALCONFIG}:${REMOTECONFIG} $(IMAGE):$(VERSION)
