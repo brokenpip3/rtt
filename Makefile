@@ -3,8 +3,8 @@ TOKEN :=$(file < $(tokenfile))
 versionfile := _version
 VERSION :=$(file < $(versionfile))
 IMAGE := brokenpip3/rtt
-LOCALCONFIG := example-settings.py
-REMOTECONFIG := /usr/src/app/settings.py
+LOCALCONFIG := example-settings.yaml
+REMOTECONFIG := /usr/src/app/settings.yaml
 
 .PHONY: all build push docker-run
 

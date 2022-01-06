@@ -17,7 +17,7 @@ spec:
         app: rtt
     spec:
       containers:
-        - image: brokenpip3/rtt:0.0.1
+        - image: brokenpip3/rtt:0.0.2
           name: rtt
           env:
           - name: TGTOKEN
@@ -41,7 +41,7 @@ spec:
           - name: storage
             mountPath: /tmp
           - name: rtt-setting
-            mountPath: /usr/src/app/settings.py
+            mountPath: /usr/src/app/settings.yaml
             readOnly: true
             subPath: settings.py
       volumes:
