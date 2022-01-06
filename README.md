@@ -6,11 +6,12 @@ Simple Rss feed reader for telegram
 
 ## Usage
 
-You need:
+Environment variables:
 
-* `TGTOKEN` env variable, which is the bot apikye
-* `TGCHAT` env variabile, which is the chat where the bot send the notifications, the bot must be a member
-* `settings.py` file wich contain the rss feed links, see [example](./example-settings.py)
+* `TGTOKEN`: telegram bot token
+* `TGCHAT`: the chat id where the bot send the notifications, the bot must be a member
+* `CONFIGFILE`: optional, where the config file is placed, default "/usr/src/app/settings.yaml"
+* `DBFILE`: optional, sqlite db path, default "/tmp/rtt.sqlite"
 
 ### Docker
 
@@ -24,9 +25,9 @@ services:
       - TGTOKEN=foo
       - TGCHATID=bar
     volumes:
-      - "${PWD}/example-settings.py:/usr/src/app/settings.py"
+      - "${PWD}/example-settings.yaml:/usr/src/app/settings.yaml"
       - rttdata:/tmp
-    image: brokenpip3/rtt:0.0.1
+    image: brokenpip3/rtt:0.0.2
 
 volumes:
   rttdata:
