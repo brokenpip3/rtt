@@ -43,7 +43,7 @@ spec:
           - name: rtt-setting
             mountPath: /usr/src/app/settings.yaml
             readOnly: true
-            subPath: settings.py
+            subPath: settings.yaml
       volumes:
       - name: rtt-setting
         configMap:

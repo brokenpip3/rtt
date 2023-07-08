@@ -1,5 +1,7 @@
 # RTT - Telegram feed reader
 
+**The development has been moved here: https://github.com/zrootorg/r2t**
+
 Simple Rss feed reader for telegram
 
 ![example](example.png)
